@@ -1,16 +1,9 @@
 import { Medal } from "lucide-react";
-import { Poppins } from "next/font/google";
-import localFont from "next/font/local";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
+import { headingFont, poppins } from "@/fonts";
 import { cn } from "@/lib/utils";
-
-const headingFont = localFont({ src: "../../assets/fonts/font.woff2" });
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
 
 export default function MarketingPage() {
   return (
