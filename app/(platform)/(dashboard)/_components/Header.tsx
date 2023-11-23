@@ -13,12 +13,20 @@ export default function Header() {
           {/* On desktop and tablet: */}
           <div className="hidden items-center gap-4 md:flex">
             <Logo />
-            <Button size="sm" className="h-auto rounded-sm px-2 py-1.5">
+            <Button
+              size="sm"
+              variant="primary"
+              className="h-auto rounded-sm px-2 py-1.5"
+            >
               Create
             </Button>
           </div>
           {/* On mobile: */}
-          <Button size="sm" className="block rounded-sm md:hidden">
+          <Button
+            size="sm"
+            variant="primary"
+            className="block rounded-sm md:hidden"
+          >
             <Plus className="h-4 w-4" />
           </Button>
         </div>
