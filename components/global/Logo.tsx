@@ -11,7 +11,7 @@ export default function Logo() {
       className="hidden items-center gap-2 transition hover:opacity-75 md:flex"
     >
       <Image alt="taskify logo" src="/logo.svg" width={30} height={30} />
-      <p className={cn("text-lg text-neutral-700", headingFont.className)}>
+      <p className={cn("text-lg text-neutral-700 pb-1", headingFont.className)}>
         Taskify
       </p>
     </Link>
