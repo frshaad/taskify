@@ -5,9 +5,17 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
+const siteConfig = {
   title: "Taskify",
-  description: "A Trello clone created by Next.js",
+  description: "Collaborate, manage projects, and reach new productivity peaks",
+};
+
+export const metadata: Metadata = {
+  title: {
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.title}`,
+  },
+  description: siteConfig.description,
 };
 
 export default function RootLayout({

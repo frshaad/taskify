@@ -10,12 +10,12 @@ export default function MarketingPage() {
     <section className="flex flex-col items-center justify-center gap-6">
       <div
         className={cn(
-          "flex items-center gap-2 rounded-full border bg-amber-100 p-4 text-amber-700 shadow-sm",
+          "flex items-center gap-2 rounded-full border bg-amber-100 px-6 py-4 text-amber-700 shadow-sm",
           headingFont.className,
         )}
       >
         <Medal className="h-6 w-6" />
-        <h3 className="uppercase tracking-wider">No 1 task manager</h3>
+        <h3 className="uppercase tracking-widest">No 1 task manager</h3>
       </div>
 
       <h1
