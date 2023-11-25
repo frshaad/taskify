@@ -4,10 +4,12 @@ import { Plus } from "lucide-react";
 import { Logo } from "@/components/global";
 import { Button } from "@/components/ui/button";
 
+import MobileSidebar from "./Sidebar/MobileSidebar";
+
 export default function Header() {
   return (
     <header className="fixed top-0 z-50 flex h-14 w-full items-center border-b bg-white px-4 shadow-sm">
-      {/* TODO: Mobile sidebar */}
+      <MobileSidebar />
       <div className="mx-auto flex w-full items-center justify-between md:max-w-screen-2xl">
         <div>
           {/* On desktop and tablet: */}
