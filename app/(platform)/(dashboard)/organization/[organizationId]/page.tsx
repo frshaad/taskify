@@ -1,7 +1,16 @@
-import { auth } from "@clerk/nextjs";
+import OrgControl from "./_components/OrgControl";
 
-export default function OrganizationPage() {
-  const { userId, orgId } = auth();
+type Props = {
+  params: { organizationId: string };
+};
 
-  return <div>{orgId}</div>;
+export default function OrganizationPage({
+  params: { organizationId },
+}: Props) {
+  return (
+    <div>
+      <OrgControl />
+      {organizationId}
+    </div>
+  );
 }
