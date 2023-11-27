@@ -37,15 +37,12 @@ export default function Sidebar({
     return acc;
   }, []);
 
-  const onExpand = useCallback(
-    (id: string) => {
-      setOrgsExpansionState((curr) => ({
-        ...curr,
-        [id]: !orgsExpansionState[id],
-      }));
-    },
-    [orgsExpansionState, setOrgsExpansionState],
-  );
+  const onExpand = (id: string) => {
+    setOrgsExpansionState((prev) => ({
+      ...prev,
+      [id]: !orgsExpansionState[id],
+    }));
+  };
 
   const SidebarAccordion = () => (
     <Accordion
@@ -58,7 +55,7 @@ export default function Sidebar({
           key={organization.id}
           isActive={actioveOrg?.id === organization.id}
           isExpanded={orgsExpansionState[organization.id]}
-          organization={organization as unknown as Organization}
+          organization={organization as Organization}
           onExpand={onExpand}
         />
       ))}

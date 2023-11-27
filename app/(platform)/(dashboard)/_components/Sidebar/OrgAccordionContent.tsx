@@ -1,5 +1,9 @@
+"use client";
+
+import { useOrganizationList } from "@clerk/nextjs";
 import { Activity, CreditCard, Layout, Settings } from "lucide-react";
-import { usePathname, useRouter } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -13,8 +17,15 @@ type Props = {
 export default function OrgAccordionContent({ organization }: Props) {
   const router = useRouter();
   const pathname = usePathname();
+  const { organizationId } = useParams();
+  const { setActive } = useOrganizationList();
 
   function onClick(href: string) {
+    if (setActive) {
+      setActive({
+        organization: organization.id as string,
+      });
+    }
     router.push(href);
   }
 

@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 import {
@@ -13,7 +11,7 @@ import OrgAccordionContent from "./OrgAccordionContent";
 
 export type Organization = {
   id: string;
-  slug: string | null;
+  slug: string;
   imageUrl: string;
   name: string;
 };
